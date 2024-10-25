@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>User</title>
+    <style>
+        body{
+            padding: 10px;
+        }
+        .input1{
+            margin-bottom: 20px;
+            
+            /* background-color: aqua; */
+        }
+        .input1 >div{
+            width: 200px;
+            height: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .input1 >div>#input1{
+            border-radius: 5px;
+            width: 100%;
+            outline: none;
+            border: 1px solid rgb(32, 32, 78) ;
+            height: 100%;
+        }
+        .input1 >div>i{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        .input1 >div>i:hover{
+            cursor: pointer;
+        }
+        .user{
+            background-color: rgb(32, 32, 78);
+            color: white;
+            /* height: 40px; */
+            line-height: 40px;
+            padding-left:20px ;
+        }
+        .table table tr td:nth-child(6) div{
+            display: inline-block;
+            border: 1px solid rgb(32, 32, 78);
+            border-radius: 5px;
+            padding:5px;
+            width: calc(50% - 20px);
+            text-align: center;
+        }
+        .table table tr td:nth-child(6) div:hover{
+            cursor: pointer;
+        }
+        .table table tr td:nth-child(5) div{
+            text-align: center;
+            border: 1px solid rgb(32, 32, 78);
+            border-radius: 5px;
+            padding:5px;
+        }
+        .table table tr td:nth-child(5) div:hover{
+            cursor: pointer;
+        }
+        .table table{
+        
+            border-collapse: collapse;
+            
+            width: 100%;
+
+            
+        }
+        .table{
+            border:1px solid rgb(32, 32, 78);
+            padding:5px;  
+            
+        }
+        .table table tr td{
+            padding:5px;
+            height: 20px;
+            border: 1px solid rgb(32, 32, 78);
+            /* border-collapse: collapse; */
+            /* padding: 5px; */
+        }
+        .edit{
+            position: fixed;
+            top:0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+            width:100vw;
+            height:100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0,0.5);
+        }
+        .editinner{
+            padding:10px;
+            background-color: white;
+            border-radius: 5px;
+            width: 500px;
+        
+        }
+        .editinner>form>div:nth-child(1){
+            text-align: center;
+        }
+        .editinner>form>div{
+            margin: 10px;
+            display: flex;
+        }
+        .editinner>form>div>div:nth-child(1){
+            display: inline-block;
+            width: 150px;
+        }
+        .editinner>form>div>div:nth-child(2){
+            display: inline-block;
+            width: calc(100% - 200px);
+            /* width: 200px; */
+        }
+        .editinner>form>div>div:nth-child(2)>input,.editinner>form>div>div:nth-child(2)>textarea{
+            width: 100%;
+        }
+        input{
+            outline: none;
+        }
+        .editinner> form> div:nth-child(5)>div{
+            top: 0px;
+            left: 0px;
+        }
+        .editinner> form>div>div:nth-child(1) >label> i{
+            font-size: 12px;
+        }
+        .editinner >form>button{
+            width: 100%;
+            background-color: rgb(236,103,86);
+            border: none;
+            height: 30px;
+            margin: 10px;
+
+        }
+        .editinner >form>button:hover{
+            cursor: pointer;
+        }
+        .editinner > form > div > label {
+            width: 150px; /* Chiều rộng cho nhãn */
+        }
+        .editinner > form > div > input,
+        .editinner > form > div > textarea {
+            flex: 1; /* Chiếm không gian còn lại */
+            outline: none;
+            border: 1px solid rgb(32, 32, 78);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input1">
+            <label for="input1">Tìm kiếm theo tên <i class="fa-regular fa-user"></i></label>
+            <div><input type="text" id="input1"> <i class="fa-solid fa-magnifying-glass"></i></div>
+            
+
+        </div>
+        <div class="user">User <i class="fa-solid fa-users"></i></div>
+        <div class="edit">
+            <div class="editinner">
+                <form action="">
+                    <div><h2>edit user information</h2></div>
+                    <div>
+                        <div><label for="username">user name <i class="fa-regular fa-circle-user"></i>: </label></div>
+                        <div><input type="text" id="username" placeholder="Nhập tên khách hàng" required></div>
+                    </div>
+                    <div>
+                        <div><label for="emailuser">email <i class="fa-regular fa-envelope"></i>:</label></div>
+                        <div><input type="email" placeholder="Nhập email" required id="emailuser"></div>
+                    </div>
+                    <div>
+                        <div><label for="telephoneuser">telephone <i class="fa-solid fa-phone"></i>:</label></div>
+                        <div><input type="tel"placeholder="Nhập số điện thoại" required id="telephoneuser"></div>
+                    </div>
+                    <div>
+                        <div><label for="addressuser">address <i class="fa-solid fa-location-pin"></i>:</label></div>
+                        <div><textarea id="addressusername" name="address" rows="4" placeholder="Nhập địa chỉ" required></textarea>
+                        </div>
+                    </div>
+                    <button>lưu thay đổi</button>
+                </form>
+            </div>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Họ tên</td>
+                    <td>Email</td>
+                    <td>Số điện thoại</td>
+                    <td>Đơn hàng</td> 
+                    <!-- thêm thẻ a -->
+                    <td>Thao tác</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Lâm Thái Yến Nhi</td>
+                    <td>bnhi@gmail.com</td>
+                    <td>111111111</td>
+                    <td><div>chi tiết</div></td>
+                    <td>
+                        <div>edit</div>
+                        <div>delete</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mạc Tuấn Hào</td>
+                    <td>pickmeboy@gmail.com</td>
+                    <td>123456789</td>
+                    <td><div>chi tiết</div></td>
+                    <td>
+                        <div>edit</div>
+                        <div>delete</div>
+                    </td>
+                    <tr>
+                        <td>3</td>
+                        <td>Khang Chi</td>
+                        <td>akhang@gmail.com</td>
+                        <td>987654321</td>
+                        <td><div>chi tiết</div></td>
+                        <td>
+                            <div>edit</div>
+                            <div>delete</div>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

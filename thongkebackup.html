@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        *{
+            color: white;
+
+        }
+        .container{
+            margin: 0px 30px;
+            border: 2px solid rgb(32, 32, 78);
+        }
+        .inner1{
+            margin:0px;
+            background-color: rgb(32, 32, 78);
+            position: relative;
+        }
+        .inner1 >div:nth-child(1){
+            padding:20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .inner1 > div:nth-child(2){
+            color: white;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .inner1 > div:nth-child(2) > a >i{
+            color: white;
+            font-size: 15px;
+        }
+        .inner2{
+            background-color: rgb(40,53,66);
+            /* height: 70px; */
+            padding:20px;
+            margin:10px;
+        }
+        .inner2 >div{
+            margin: 5px;
+        }
+        .inner2 >div:nth-child(1){
+            margin: 10px;
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .innerr2 > div{
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid white;
+            /* margin: 10px; */
+            font-size: 20px;
+            text-align: center;
+        }
+        .inner3{
+            background-color: rgb(80,139,192);
+            /* height: 70px; */
+            padding:20px;
+            margin: 10px;
+            margin:10px;
+        }
+        .inner3 >div:nth-child(1){
+            /* margin: 10px; */
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .innerr3>div{
+            width: 100px;
+            border-radius: 5px;
+            border: 1px solid white;
+            /* margin: 10px; */
+            font-size: 20px;
+            text-align: center;
+        }
+        .inner3 >div{
+            margin: 5px;
+        }
+        .inner4{
+            /* height: 70px; */
+            padding:20px;
+            margin:10px;
+            background-color: rgb(236,103,86);
+        }
+        .inner4 >div{
+            margin: 5px;
+        }
+        .innerr4 >div:nth-child(1){
+            width: 100px;
+            border-radius: 5px;
+            border: 1px solid white;
+            /* margin: 10px; */
+            font-size: 20px;
+            text-align: center;
+        }
+        .innerr4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #date{
+            background-color: white;
+            /* height: 200px; */
+            border: 1px solid white;
+            border-radius: 5px;
+            position: absolute;
+            right: 20px;
+            top: 70%;
+            color: black;
+            padding: 20px;
+            /* display: none; */
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #date >i{
+            color: black;
+            padding:5px;
+
+        }
+        #date>div>label>select{
+            padding:5px;
+            margin-top: 5px;
+            color: black;
+            width: 100%;
+        }
+        #date>div>label>select>option{
+            color: black;
+        }
+        #date >button{
+            margin-top: 5px;
+            border: 2px solid rgb(32, 32, 78);
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(32, 32, 78);
+
+        }
+        #date >button:hover{
+            cursor: pointer;
+        }
+        #week2monthoctoberyear2024{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner1">
+            <div>Thống kê</div>
+            <div id="">filter <a href=""><i class="fa-solid fa-angle-down" id="angle-down"></i></a> </div>
+            <div id="date">
+                select date : <i class="fa-regular fa-calendar-days" ></i>
+                <div>
+                    <label for="selectyear">                    
+                        <select name="" id="selectyear">
+                        <option value="">year</option>
+                        <option value="">2024</option>
+                    </select></label>
+                </div>
+                <div>
+                    <label for="selectmonth">                    
+                        <select name="" id="selectmonth" >
+                        <option value=""><a href="">month</a></option>
+                        <option value="1"><a href="">January</a></option>
+                        <option value="2"><a href="">February</a></option>
+                        <option value="3"><a href="">March</a></option>
+                        <option value="4"><a href="">April</a></option>
+                        <option value="5"><a href="">May</a></option>
+                        <option value="6"><a href="">June</a></option>
+                        <option value="7"><a href="">July</a></option>
+                        <option value="8"><a href="">August</a></option>
+                        <option value="9"><a href="">September</a></option>
+                        <option value="10"><a href="">October</a></option>
+                        <option value="11"><a href="">November</a></option>
+                        <option value="12"><a href="">December</a></option>
+                    </select></label>
+                </div>
+                <div>
+                    <label for="selectweek">
+                        <select name="" id="selectweek">
+                            <option value=""><a href="">week</a></option>
+                            <option value="1"><a href="">week 1</a></option>
+                            <option value="2"><a href="">week 2</a></option>
+                            <option value="3"><a href="">week 3</a></option>
+                            <option value="4"><a href="">week 4</a></option>
+                        </select>
+                    </label>
+                </div>
+                <button id="button1">confirm</button>
+            </div>
+        </div>
+        <div id="week1monthoctoberyear2024">
+            <div class="inner2">
+                <div class="innerr2">
+                    <div>tuần : 1(1.10.2024-7.10.2024)</div>
+                </div>
+                <div>doanh thu :9999999999999999999999999999999999999999</div>
+                <div>tổng sản phẩm bán ra :99999999999999</div>
+                <div>số sản phẩm được bán :99999999999999</div>
+            </div>
+            <div class="inner3">
+                <div class="innerr3">
+                    <div>tháng : 10</div>
+                </div>
+                <div>doanh thu :9999999999999999999999999999999999999999</div>
+                <div>tổng sản phẩm bán ra :99999999999999</div>
+                <div>số sản phẩm được bán :99999999999999</div>
+            </div>
+            <div class="inner4">
+                <div class="innerr4">
+                    <div>năm : 2024</div>
+                </div>
+                <div>doanh thu :9999999999999999999999999999999999999999</div>
+                <div>tổng sản phẩm bán ra :99999999999999</div>
+                <div>số sản phẩm được bán :99999999999999</div>
+            </div>
+        </div>
+        <div id="week2monthoctoberyear2024">
+            <div class="inner2">
+                <div class="innerr2">
+                    <div>tuần : 2(8.10.2024-14.10.2024)</div>
+                </div>
+                <div>doanh thu :2222222</div>
+                <div>tổng sản phẩm bán ra :222222222</div>
+                <div>số sản phẩm được bán :3333333333</div>
+            </div>
+            <div class="inner3">
+                <div class="innerr3">
+                    <div>tháng : 10</div>
+                </div>
+                <div>doanh thu :55555555</div>
+                <div>tổng sản phẩm bán ra :666666666</div>
+                <div>số sản phẩm được bán :7777777777777</div>
+            </div>
+            <div class="inner4">
+                <div class="innerr4">
+                    <div>năm : 2024</div>
+                </div>
+                <div>doanh thu :0000000000000</div>
+                <div>tổng sản phẩm bán ra :00000000000000</div>
+                <div>số sản phẩm được bán :000000000000000000</div>
+            </div>
+        </div>
+    </div>
+    <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            const open = document.querySelector("#angle-down");
+            const notification = document.querySelector("#date");
+            open.addEventListener("click", function() {
+                // Toggle hiển thị khung thông báo
+                if (notification.style.display === "none" || notification.style.display === "") {
+                    notification.style.display = "block"; // Hiển thị thông báo
+                } 
+                else {
+                    notification.style.display = "none"; // Ẩn thông báo
+                }
+            });
+        });
+        const open1=document.querySelector("#button1")
+open1.addEventListener('click',function(){
+    document.querySelector('.week2monthoctoberyear2024').style.display="block"
+    document.querySelector(".week1monthoctoberyear2024").style.display="none";
+})
+        document.getElementById('button1').addEventListener('click', function() {
+            // Lấy giá trị của các select
+            const selectedMonth = document.getElementById('selectmonth').value;
+            const selectedYear = document.getElementById('selectyear').value;
+            const selectedWeek = document.getElementById('selectweek').value;
+
+            // Hiển thị div tương ứng dựa trên giá trị được chọn
+            if (selectedMonth && selectedYear && selectedWeek) {
+                document.getElementById('week' + selectedWeek + 'month' + selectedMonth + 'year' + selectedYear).style.display = 'block';
+            }
+        });
+
+</script>
+
+</body>
+</html>
